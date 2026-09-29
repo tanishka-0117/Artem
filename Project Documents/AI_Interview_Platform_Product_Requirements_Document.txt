@@ -1,0 +1,250 @@
+AI Interview Preparation & Assessment Platform — Product Requirements
+Page 1
+ AI Interview Preparation & Assessment
+ Platform
+ PRODUCT REQUIREMENTS DOCUMENT (PRD)
+Document Item
+Specification
+Product
+AI Interview Preparation & Assessment Platform
+Requirement Version
+1.0
+Primary Users
+Students / Candidates
+Secondary Users
+Placement Administrators / TPOs
+Core Stack
+React.js, Tailwind CSS, Node.js, Express.js, MongoDB, OpenAI/Groq APIs
+Document Purpose
+Define the product-level features and expected behavior of the web
+application.
+1. Product Vision
+The platform is a unified interview-preparation and placement-readiness application. It combines authentication,
+candidate dashboards, AI-powered interviews, resume analysis, a structured question bank, coding practice, and
+progress tracking into one product experience.
+The product should help a candidate prepare, assess performance, understand weak areas, and continuously
+improve through targeted practice and feedback.
+2. Authentication
+Users can:
+• Register
+• Login
+• Logout
+• Verify email
+• Reset password
+• Update profile
+• Upload profile photo
+• Manage account settings
+Authentication methods:
+Method
+Requirement
+Email + Password
+Primary account sign-in method.
+OTP / Email Verification
+Used to verify ownership of the email address.
+JWT / Session Authentication
+Used to maintain authenticated application sessions.
+
+AI Interview Preparation & Assessment Platform — Product Requirements
+Page 2
+3. Dashboard
+The main dashboard should give the user a quick view of preparation progress and current interview readiness.
+Dashboard Metric
+Purpose
+Preparation Score
+High-level view of overall preparation performance.
+Interview Readiness Score
+Indicates the current interview-preparation level.
+Questions Attempted
+Tracks the amount of practice completed.
+Mock Interviews Completed
+Shows interview practice volume.
+Coding Problems Solved
+Shows DSA/coding activity.
+Average Answer Score
+Shows the average interview-answer evaluation.
+Weak Areas
+Highlights topics where performance is relatively low.
+Recommended Topics
+Suggests what to practice next.
+Recent Activity
+Shows the latest assessments, interviews and practice actions.
+4. AI Interview
+Users can configure the interview before starting it.
+Configuration
+Available Options
+Interview Type
+Technical, HR, Behavioral, System Design, Resume Based, Company
+Specific
+Difficulty
+Beginner, Intermediate, Advanced
+AI interview behavior:
+1. Ask a question.
+2. Wait for the candidate's answer.
+3. Analyze the answer.
+4. Give a score.
+5. Explain strengths.
+6. Explain weaknesses.
+7. Suggest improvements.
+8. Ask the next question.
+The sequence is intentionally interactive: question → answer → analysis → feedback → next question.
+
+AI Interview Preparation & Assessment Platform — Product Requirements
+Page 3
+5. Resume Analyzer
+The user uploads a resume. The system analyzes the resume using AI and returns structured preparation
+insights.
+Resume Analysis Area
+What is analyzed
+Skills
+Technical and role-relevant skills present in the resume.
+Experience
+Work/internship/project experience and relevance.
+Projects
+Project descriptions, technologies and demonstrated work.
+Education
+Educational background and related information.
+ATS Compatibility
+Resume structure and keyword alignment for ATS-oriented review.
+Missing Skills
+Skills that appear important but are missing or underrepresented.
+Weak Descriptions
+Project/experience descriptions that can be made stronger.
+Grammar
+Language and writing issues.
+Impact Statements
+Whether achievements communicate measurable impact.
+The AI should generate:
+• Resume score
+• Improvement suggestions
+• Interview questions based on the resume
+• Skill-gap analysis
+The resume module therefore acts as both a resume-review feature and an input source for personalized
+interview preparation.
+6. Mock Interview
+Before starting a mock interview, the user selects:
+• Job role
+• Experience level
+• Interview type
+• Difficulty
+• Duration
+The system then generates and conducts a realistic interview based on those settings.
+At the end, the report should contain:
+Report Metric
+Description
+Overall Score
+Combined interview result.
+Technical Score
+Technical correctness and depth.
+Communication Score
+Clarity and quality of communication.
+Confidence Score
+Confidence-related evaluation signal where supported.
+Problem-Solving Score
+Reasoning and approach quality.
+Strengths
+Areas where the candidate performed well.
+Weaknesses
+Areas requiring improvement.
+
+AI Interview Preparation & Assessment Platform — Product Requirements
+Page 4
+Report Metric
+Description
+Recommendations
+Specific next-step preparation suggestions.
+
+AI Interview Preparation & Assessment Platform — Product Requirements
+Page 5
+7. Question Bank
+The question bank provides structured interview and technical preparation content.
+Categories:
+Technical / Interview Categories
+Categories
+DSA & Core CS
+DSA, OOP, DBMS, OS, Computer Networks, System Design
+Web & Programming
+Web Development, Java, C++, Python, JavaScript, React, Node.js, SQL
+People / Interview
+HR, Behavioral
+Question-bank features:
+• Search
+• Filter
+• Difficulty
+• Topic
+• Bookmark
+• Mark completed
+• AI explanation
+8. Coding Practice
+Coding practice provides an online programming environment for DSA and technical problem solving.
+Coding Feature
+Requirement
+Problem Statement
+Show problem description, constraints and examples.
+Code Editor
+Interactive editor for writing solutions.
+Test Cases
+Run code against test inputs.
+Run Code
+Execute code and return result.
+Submit Code
+Evaluate final submission.
+Execution Result
+Show success, failure or runtime/compilation information.
+Time Complexity
+Display/explain expected or analyzed complexity.
+Space Complexity
+Display/explain expected or analyzed space usage.
+AI Hints
+Provide contextual hints without immediately revealing the full answer.
+AI Code Explanation
+Explain the submitted code and possible improvements.
+Supported languages:
+Language
+Status
+C++
+Required
+Java
+Required
+Python
+Required
+JavaScript
+Required
+
+AI Interview Preparation & Assessment Platform — Product Requirements
+Page 6
+9. Progress Tracking
+The product must track learning and interview activity over time instead of only showing one-time results.
+Tracked Area
+Examples
+Daily Practice
+Daily questions, coding problems and interviews attempted.
+Weekly Activity
+Weekly preparation volume and consistency.
+Topic Performance
+Performance by DSA/CS/web/interview topic.
+Question Accuracy
+Correct vs incorrect question performance.
+Coding Performance
+Submission success, execution and topic-level performance.
+Interview Scores
+Scores across mock interviews and interview types.
+Skill Improvements
+Change in performance after repeated practice.
+Analytics should be displayed using:
+• Line charts
+• Bar charts
+• Radar charts
+• Progress indicators
+10. Product-Level Interaction Flow
+Register/Login → Dashboard → Upload Resume → AI Resume Analysis → Select Interview/Practice → Complete
+Assessment → Receive Feedback → Track Progress → Follow Recommendations → Re-assess
+11. Product Acceptance Outcome
+A successful implementation should allow a user to create an account, maintain a profile, analyze a resume, start
+a configured mock interview, practice coding, use the question bank, receive AI feedback, and review progress
+analytics from a single web application.
+The product requirements in this document define the requested user-facing functionality. Detailed architecture,
+database design, API contracts, AI implementation rules, security controls and testing procedures should be
+maintained in their respective project documents.
+Source note: This PRD is based on the requirements supplied in the project brief for Product Requirements. No additional product
+features have been silently added as mandatory requirements.
+

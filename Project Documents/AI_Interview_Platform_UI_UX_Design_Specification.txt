@@ -1,0 +1,266 @@
+AI Interview Preparation & Assessment Platform — UI/UX Specification
+Page 1
+ AI Interview Preparation & Assessment
+ Platform
+ UI/UX DESIGN SPECIFICATION
+Document Item
+Specification
+Design Goal
+Create a premium professional SaaS-style interface; the application must
+not look like a basic student project.
+Design Principles
+Clean, modern, professional, minimal, fast, responsive and accessible.
+Main Navigation
+Dashboard, Practice, AI Interview, Coding, Resume Analyzer, Question Bank,
+Progress, Roadmap, Profile.
+Component Strategy
+Reusable buttons, cards, modals, dialogs, forms, tables, tabs, dropdowns,
+toasts, progress bars, charts and skeleton loaders.
+1. Design Goal
+The application should feel like a professional SaaS product. The UI must emphasize clarity, hierarchy, useful
+information and strong primary actions rather than decorative complexity.
+2. Design Principles
+Principle
+Requirement
+Clean
+Use whitespace, clear hierarchy and minimal visual noise.
+Modern
+Use contemporary SaaS patterns such as cards, tabs, progress indicators and
+responsive dashboards.
+Professional
+Keep typography, spacing, components and visual language consistent.
+Minimal
+Show the most important information first; use progressive disclosure for secondary
+details.
+Fast
+Avoid unnecessary effects and provide clear loading/processing feedback.
+Responsive
+Layouts adapt across desktop, tablet and mobile.
+Accessible
+Use readable contrast, keyboard access, focus states and clear form labels.
+3. Main Navigation
+Navigation
+Purpose
+Dashboard
+Readiness overview, recommendations, recent activity and next action.
+Practice
+Central preparation area.
+AI Interview
+Configure, start and review AI interviews.
+Coding
+Coding challenges, editor, submissions and results.
+Resume Analyzer
+Resume upload, analysis, skills and suggestions.
+Question Bank
+Search, filter, bookmark and complete questions.
+Progress
+Historical performance and improvement trends.
+Roadmap
+Personalized preparation plan and actions.
+
+AI Interview Preparation & Assessment Platform — UI/UX Specification
+Page 2
+Navigation
+Purpose
+Profile
+Profile and account settings.
+
+AI Interview Preparation & Assessment Platform — UI/UX Specification
+Page 3
+4. Dashboard Layout
+Area
+Required Content
+Top
+Greeting, readiness score, Start Interview button.
+Middle
+Performance overview, skill analysis, recommended practice.
+Bottom
+Recent activity, upcoming goals.
+The dashboard should immediately answer: Where am I? What is weak? What should I do next?
+5. Dashboard Components
+Component
+Expected Behavior
+Greeting
+Candidate name + concise preparation status.
+Readiness Score
+Prominent summary with supporting component scores.
+Start Interview
+Primary action near readiness summary.
+Performance Overview
+Compact cards or charts for important metrics.
+Skill Analysis
+Strength/weakness breakdown by skill or topic.
+Recommended Practice
+Prioritized actions based on current evidence.
+Recent Activity
+Latest assessments, interviews, coding attempts and feedback.
+Upcoming Goals
+Near-term roadmap targets.
+6. Reusable Components
+Component
+Usage
+Buttons
+Primary, secondary, tertiary, danger and disabled variants.
+Cards
+Metrics, recommendations, question summaries and profile sections.
+Modals / Dialogs
+Focused actions and important confirmations.
+Forms
+Authentication, profile, resume, interview configuration and settings.
+Tables
+Question bank, results and admin analytics.
+Tabs
+Switch related content without leaving the current context.
+Dropdowns
+Role, difficulty, topic and filters.
+Toasts
+Short success, warning and non-blocking feedback.
+Progress Bars
+Readiness, completion and skill proficiency.
+Charts
+Performance trends, topic comparisons and history.
+Skeleton Loaders
+Stable layout during loading.
+
+AI Interview Preparation & Assessment Platform — UI/UX Specification
+Page 4
+7. AI Interview UX
+The interview screen should be focused and distraction-free. The current question should be visually dominant
+and answer controls easy to access.
+Element / State
+UX Requirement
+Configuration
+Choose interview type, difficulty, role and duration.
+Question
+Show one clear question with context/progress.
+Answer Input
+Clean text input; voice controls can be added later.
+Processing
+Show AI-processing state and prevent duplicate submission.
+Feedback
+Show score, strengths, weaknesses and improvements.
+Next Question
+Obvious action after evaluation.
+Completion
+Final summary with links to progress and roadmap.
+8. Coding Interface UX
+Area
+Requirement
+Problem Panel
+Problem statement, constraints, examples and topic/difficulty.
+Editor
+Monaco editor, language selector and run/submit controls.
+Test Results
+Pass/fail, compilation/runtime information and execution status.
+AI Assistance
+Hints/explanations are secondary and must not obscure the coding flow.
+Submission History
+Previous submissions and summaries.
+Timer
+Visible timer for timed assessments.
+9. Resume Analyzer UX
+Upload → Analyze → Score → Skill Gaps → Suggestions → Interview Questions
+Results should be split into clear sections/cards so the user can quickly understand resume score, skills, missing
+areas, weak descriptions and improvement suggestions.
+10. Question Bank UX
+Function
+Requirement
+Search
+Fast keyword search.
+Filter
+Category, topic and difficulty.
+Bookmark
+Save for later.
+Mark Completed
+Record practice completion.
+AI Explanation
+Open a focused explanation without losing question context.
+
+AI Interview Preparation & Assessment Platform — UI/UX Specification
+Page 5
+11. Progress & Analytics UX
+Visualization
+Use
+Line Chart
+Daily/weekly performance trend.
+Bar Chart
+Topic/category comparison.
+Radar Chart
+Multi-dimensional skill profile.
+Progress Indicator
+Completion/readiness against a target.
+Score Card
+Concise key metric with context.
+Analytics hierarchy:
+Overall readiness → component scores → weak topics → historical trend → recommended next action.
+12. Required UI States
+State
+Expected Behavior
+Loading
+Skeleton/spinner or processing indicator while preserving layout where possible.
+Empty
+Explain that no data exists yet and provide a useful next action.
+Error
+Human-readable explanation plus retry/recovery where possible.
+Success
+Confirm the action and show resulting state.
+Disabled
+Explain why the control is disabled when the reason is not obvious.
+13. Responsive Design
+Device
+Requirement
+Desktop
+Primary target for coding, analytics and interview sessions.
+Tablet
+Dashboard, resume and review remain comfortable.
+Mobile
+Dashboard, resume, progress and roadmap remain usable; coding can be optimized
+separately.
+14. Accessibility
+• Use semantic HTML controls.
+• Provide labels for form fields.
+• Maintain readable contrast.
+• Show visible keyboard focus.
+• Ensure controls are usable without a mouse.
+• Do not use color alone for success/error communication.
+• Show clear error text near the relevant control.
+• Provide supporting text/values for chart-based insights.
+
+AI Interview Preparation & Assessment Platform — UI/UX Specification
+Page 6
+15. Visual Quality Rules
+Rule
+Requirement
+Consistency
+Same component looks and behaves consistently across pages.
+Spacing
+Use a consistent spacing scale.
+Typography
+Use a limited hierarchy of sizes and weights.
+Color
+Use a restrained professional palette; reserve stronger accents for actions/status.
+Motion
+Use subtle transitions only when useful.
+Content Density
+Avoid overcrowding; prioritize next action.
+Feedback
+Async actions visibly transition through relevant states.
+Error Recovery
+Users should not reach a dead end after an error.
+16. Page-Level UX Checklist
+Every feature/page should verify:
+• Responsive behavior at supported viewport sizes.
+• Loading, empty, error, success and disabled states.
+• Clear primary action.
+• Understandable validation and feedback.
+• Reuse of shared components.
+• Graceful API failure handling.
+• Accessibility basics.
+17. Design Outcome
+The final application should feel like a polished SaaS product with clear navigation, reusable components,
+focused interview/coding experiences, informative analytics and strong feedback states. The UI should
+communicate the central value: know your readiness, understand your weaknesses, and know what to do
+next.
+Implementation rule: UI/UX should support the supplied product requirements. Do not add new mandatory user flows without updating
+the PRD.
+
