@@ -9,6 +9,27 @@ node_modules/
 # Build output
 dist/
 
+# Uploaded files
+uploads/
+
+# Test and tooling output
+coverage/
+.nyc_output/
+.cache/
+.vite/
+.turbo/
+*.tsbuildinfo
+
+# Temporary and local data
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.sqlite
+*.sqlite3
+*.db
+
 # IDE / Editor
 .vscode/
 .idea/
@@ -22,6 +43,3 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
-
-# TypeScript cache
-*.tsbuildinfo

@@ -15,9 +15,7 @@ import {
   ResponsiveContainer, AreaChart, Area, BarChart, Bar, XAxis, YAxis,
   CartesianGrid, Tooltip, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
 } from 'recharts';
-import {
-  mockWeeklyTrend, mockSkillRadar
-} from '@/lib/mockData';
+
 
 const Progress: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -81,7 +79,7 @@ const Progress: React.FC = () => {
             </CardHeader>
             <div className="h-[260px] -mx-2">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={mockWeeklyTrend}>
+                <AreaChart data={(analytics.recentInterviews || []).map((i: any, idx: number) => ({ interview: `#${idx + 1}`, score: typeof i.score === 'number' ? i.score : 0 }))}>
                   <defs>
                     <linearGradient id="overallGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="var(--primary)" stopOpacity={0.15} />
@@ -89,12 +87,10 @@ const Progress: React.FC = () => {
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
-                  <XAxis dataKey="week" tick={{ fontSize: 12, fill: 'var(--text-muted)' }} axisLine={false} tickLine={false} />
+                  <XAxis dataKey="interview" tick={{ fontSize: 12, fill: 'var(--text-muted)' }} axisLine={false} tickLine={false} />
                   <YAxis tick={{ fontSize: 12, fill: 'var(--text-muted)' }} axisLine={false} tickLine={false} domain={[0, 100]} />
                   <Tooltip contentStyle={{ backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '13px' }} />
-                  <Area type="monotone" dataKey="overall" stroke="var(--primary)" strokeWidth={2} fill="url(#overallGrad)" name="Overall" />
-                  <Area type="monotone" dataKey="dsa" stroke="var(--cyan)" strokeWidth={1.5} fill="none" name="DSA" strokeDasharray="4 4" />
-                  <Area type="monotone" dataKey="system" stroke="var(--purple)" strokeWidth={1.5} fill="none" name="System" strokeDasharray="4 4" />
+                  <Area type="monotone" dataKey="score" stroke="var(--primary)" strokeWidth={2} fill="url(#overallGrad)" name="Score" />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -107,7 +103,7 @@ const Progress: React.FC = () => {
             </CardHeader>
             <div className="h-[260px]">
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart data={mockSkillRadar} cx="50%" cy="50%" outerRadius="70%">
+                <RadarChart data={(analytics.topicPerformance || []).map((tp: any) => ({ skill: tp.topic, score: tp.score || 0, fullMark: 100 }))} cx="50%" cy="50%" outerRadius="70%">
                   <PolarGrid stroke="var(--border)" />
                   <PolarAngleAxis dataKey="skill" tick={{ fontSize: 11, fill: 'var(--text-secondary)' }} />
                   <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
